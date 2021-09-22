@@ -1,5 +1,6 @@
 import './App.css';
 import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
 import CalculationResults from './CalculationResults';
 import BetSizeButtons from './BetSizeButtons';
 import ManualBetSizeInputs from './ManualBetSizeInputs';
@@ -8,7 +9,7 @@ function App() {
   return (
     <Container>
       <CalculationResults />
-      <p>Slider placeholder</p>
+      <Form.Range />
       <BetSizeButtons />
       <ManualBetSizeInputs />
     </Container>
