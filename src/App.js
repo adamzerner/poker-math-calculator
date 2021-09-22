@@ -8,7 +8,14 @@ import ManualBetSizeInputs from './ManualBetSizeInputs';
 function App() {
   return (
     <Container>
-      <CalculationResults />
+      <CalculationResults
+        betSizePercentage={10}
+        equityRequiredPercentage={20}
+        mdfPercentage={30}
+        odds={2.2}
+        outs={12}
+        alphaPercentage={60}
+      />
       <Form.Range />
       <BetSizeButtons />
       <ManualBetSizeInputs />
