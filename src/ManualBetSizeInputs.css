@@ -1,0 +1,10 @@
+.manual-bet-size-inputs {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+ }
+
+input {
+  flex-grow: 1;
+  text-align: center;
+}
