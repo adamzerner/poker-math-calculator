@@ -1,12 +1,17 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import CalculationResults from './CalculationResults';
+import BetSizeButtons from './BetSizeButtons';
+import ManualBetSizeInputs from './ManualBetSizeInputs';
 
 function App() {
   return (
-    <div className="App">
-      <Button variant="primary">Primary</Button>
-      <p>Hello world</p>
-    </div>
+    <Container>
+      <CalculationResults />
+      <p>Slider placeholder</p>
+      <BetSizeButtons />
+      <ManualBetSizeInputs />
+    </Container>
   );
 }
 
