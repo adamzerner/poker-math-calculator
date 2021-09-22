@@ -1,0 +1,10 @@
+.bet-size-buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+button {
+  flex-grow: 1;
+}
