@@ -1,7 +1,32 @@
+import CalculationResult from './CalculationResult.js';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 function CalculationResults() {
   return (
     <section>
-      calculation results placeholder
+      <Row>
+        <Col>
+          <CalculationResult />
+        </Col>
+        <Col>
+          <CalculationResult />
+        </Col>
+        <Col>
+          <CalculationResult />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <CalculationResult />
+        </Col>
+        <Col>
+          <CalculationResult />
+        </Col>
+        <Col>
+          <CalculationResult />
+        </Col>
+      </Row>
     </section>
   )
 }
