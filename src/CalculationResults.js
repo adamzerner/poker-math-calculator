@@ -17,7 +17,7 @@ function CalculationResults({
         <Col>
           <CalculationResult
             header="Bet Size"
-            body={betSizePercentage + "%"}
+            body={betSizePercentage.toPrecision(4) + "%"}
             progressBarValue={betSizePercentage}
             variant="info"
           />
@@ -25,7 +25,7 @@ function CalculationResults({
         <Col>
           <CalculationResult
             header="Equity Required"
-            body={equityRequiredPercentage + "%"}
+            body={equityRequiredPercentage.toPrecision(4) + "%"}
             progressBarValue={equityRequiredPercentage}
             variant="success"
           />
@@ -33,7 +33,7 @@ function CalculationResults({
         <Col>
           <CalculationResult
             header="Min Defense Frequency"
-            body={mdfPercentage + "%"}
+            body={mdfPercentage.toPrecision(4) + "%"}
             progressBarValue={mdfPercentage}
             variant="warning"
           />
@@ -55,7 +55,7 @@ function CalculationResults({
         <Col>
           <CalculationResult
             header="Alpha (auto profit)"
-            body={alphaPercentage + "%"}
+            body={alphaPercentage.toPrecision(4) + "%"}
             progressBarValue={alphaPercentage}
             variant="danger"
           />
