@@ -7,23 +7,44 @@ import ManualBetSizeInputs from './ManualBetSizeInputs';
 import { useState } from 'react';
 
 function getEquityRequiredPercentage(betSizePercentage) {
-  return 10;
+  return (betSizePercentage / (betSizePercentage + betSizePercentage + 100)) * 100;
 }
 
 function getMdfPercentage(betSizePercentage) {
-  return 10;
+  return 100 - getAlphaPercentage(betSizePercentage);
 }
 
 function getOdds(betSizePercentage) {
-  return 2.2;
+  /*
+
+  equity required of 25%
+  gives pot odds of 3:1
+  (100 - 25) / 25
+
+  */
+
+  const equityRequiredPercentage = getEquityRequiredPercentage(betSizePercentage);
+
+  return (100 - equityRequiredPercentage) / equityRequiredPercentage;
 }
 
 function getOuts(betSizePercentage) {
-  return 11;
+  /*
+
+  equity required of 25%
+  11 / 44 outs
+
+  X / 44 = (equityRequiredPercentage / 100)
+
+  */
+
+  const equityRequiredPercentage = getEquityRequiredPercentage(betSizePercentage);
+
+  return (equityRequiredPercentage * 44) / 100;
 }
 
 function getAlphaPercentage(betSizePercentage) {
-  return 60;
+  return (betSizePercentage / (betSizePercentage + 100)) * 100;
 }
 
 function App() {
