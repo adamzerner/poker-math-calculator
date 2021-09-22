@@ -8,3 +8,13 @@
 button {
   flex-grow: 1;
 }
+
+@media (max-width: 560px) {
+  .bet-size-buttons {
+    gap: 10px;
+  }
+  
+  button {
+    font-size: 10px !important;
+  }
+}
