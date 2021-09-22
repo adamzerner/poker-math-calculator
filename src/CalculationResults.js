@@ -1,3 +1,4 @@
+import './CalculationResults.css';
 import CalculationResult from './CalculationResult.js';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
