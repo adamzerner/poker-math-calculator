@@ -39,9 +39,9 @@ function App() {
         outs={getOuts(betSizePercentage)}
         alphaPercentage={getAlphaPercentage(betSizePercentage)}
       />
-      <Form.Range />
-      <BetSizeButtons />
-      <ManualBetSizeInputs />
+      <Form.Range onChange={(e) => setBetSizePercentage(Number(e.target.value))}/>
+      <BetSizeButtons setBetSizePercentage={setBetSizePercentage} />
+      <ManualBetSizeInputs setBetSizePercentage={setBetSizePercentage} />
     </Container>
   );
 }

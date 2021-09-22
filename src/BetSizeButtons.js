@@ -1,16 +1,18 @@
 import './BetSizeButtons.css'
 import Button from 'react-bootstrap/Button';
 
-function BetSizeButtons() {
+function BetSizeButtons({ setBetSizePercentage }) {
+  const betSizes = [20, 25, 33, 50, 67, 75, 100];
+
   return (
-    <section class="bet-size-buttons">
-      <Button variant="outline-secondary">20%</Button>
-      <Button variant="outline-secondary">25%</Button>
-      <Button variant="outline-secondary">33%</Button>
-      <Button variant="outline-secondary">50%</Button>
-      <Button variant="outline-secondary">67%</Button>
-      <Button variant="outline-secondary">75%</Button>
-      <Button variant="outline-secondary">100%</Button>
+    <section className="bet-size-buttons">
+      {betSizes.map((betSize, i) => (
+        <Button
+          key={i}
+          variant="outline-secondary"
+          onClick={() => setBetSizePercentage(betSize)}
+        >{betSize}%</Button>
+      ))}
     </section>
   )
 }
